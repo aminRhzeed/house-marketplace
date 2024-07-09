@@ -191,23 +191,26 @@ button {
   color: #2c2c2c;
 }
 
-.nameInput {
+.nameInput,
+input.nameInput:-internal-autofill-selected{
   margin-bottom: 1.5rem;
-  background: url('./assets/svg/badgeIcon.svg') #ffffff 2.5% center no-repeat;
+  background: url('./assets/svg/badgeIcon.svg') #ffffff 2.5% center no-repeat !important;
 }
 
-.emailInput {
+.emailInput,
+input.emailInput:-internal-autofill-selected {
   margin-bottom: 1.5rem;
-  background: url('./assets/svg/personIcon.svg') #ffffff 2.5% center no-repeat;
+  background: url('./assets/svg/personIcon.svg') #ffffff 2.5% center no-repeat !important;
 }
 
 .passwordInputDiv {
   position: relative;
 }
 
-.passwordInput {
+.passwordInput,
+input.passwordInput:-internal-autofill-selected {
   margin-bottom: 1.5rem;
-  background: url('./assets/svg/lockIcon.svg') #ffffff 2.5% center no-repeat;
+  background: url('./assets/svg/lockIcon.svg') #ffffff 2.5% center no-repeat !important;
 }
 
 .showPassword {
