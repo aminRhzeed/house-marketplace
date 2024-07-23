@@ -1,8 +1,10 @@
 import {useContext, useState} from 'react'
+import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRightIcon.svg'
 import { ReactComponent as VisibilityIcon } from '../assets/svg/visibilityIcon.svg'
+import OAuth from '../components/OAuth.jsx'
 
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false)
@@ -30,7 +32,7 @@ function SignIn() {
         navigate('/')
       }
     } catch (error) {
-      console.log(error)
+      toast.error('Bad User Credentials')
     }
   }
 
@@ -77,7 +79,7 @@ function SignIn() {
           </div>
         </form>
 
-        {/* Google Auth */}
+        <OAuth />
 
         <Link to='/sign-up' className='registerLink'>Sign Up Instead</Link>
       </div>

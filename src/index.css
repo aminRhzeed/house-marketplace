@@ -223,11 +223,15 @@ input.passwordInput:-internal-autofill-selected {
 }
 
 .forgotPasswordLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: #00cc66;
+  width: 100%;
   font-weight: 400;
   text-align: right;
-  margin-top: -0.5rem;
+  margin-top: 1.5rem;
 }
 
 .signInBar,

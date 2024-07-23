@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
 import { db } from '../firebase.config'
 import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRightIcon.svg'
 import { ReactComponent as VisibilityIcon } from '../assets/svg/visibilityIcon.svg'
+import OAuth from '../components/OAuth.jsx'
 
 function SignUp() {
   const [showPassword, setShowPassword] = useState(false)
@@ -42,7 +44,7 @@ function SignUp() {
       navigate('/')
 
     } catch (error) {
-      console.log(error);
+      toast.error('Something Went Wrong With Registration')
     }
   }
 
@@ -98,7 +100,7 @@ function SignUp() {
           </div>
         </form>
 
-        {/* Google Auth */}
+        <OAuth />
 
         <Link to='/sign-in' className='registerLink'>Sign In Instead</Link>
       </div>
