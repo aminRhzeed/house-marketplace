@@ -11,4 +11,7 @@ export default defineConfig({
       include: '**/*.svg',
     }),
   ],
+  server: {
+    headers: {"Cross-Origin-Embedder-Policy": "unsafe-none",},
+  }
 })
