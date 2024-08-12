@@ -10,6 +10,7 @@ import Profile from './pages/Profile'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Category from './pages/Category.jsx'
+import CreateListing from './pages/CreateListing.jsx'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               </Route>
               <Route path='/sign-in' element={<SignIn />} />
               <Route path='/sign-up' element={<SignUp />} />
+              <Route path='/create-listing' element={<CreateListing />} />
           </Routes>
         <Navbar />
       </Router>

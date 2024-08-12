@@ -4,6 +4,8 @@ import { useNavigate, Link } from 'react-router-dom'
 import { db } from '../firebase.config'
 import { updateDoc, doc } from 'firebase/firestore'
 import { toast } from 'react-toastify'
+import { ReactComponent as ArrowRight } from '../assets/svg/keyboardArrowRightIcon.svg'
+import { ReactComponent as HomeIcon } from '../assets/svg/homeIcon.svg'
 
 function Profile() {
     const auth = getAuth()
@@ -67,6 +69,11 @@ function Profile() {
                         <input type='text' id='email' className={!changeDetails ? 'profileEmail' : 'profileEmailActive'} disabled={!changeDetails} value={email} onChange={onChange}/>
                     </form>
                 </div>
+                <Link to='/create-listing' className='createListing'>
+                    <HomeIcon />
+                    <p>Sell or Rent Your Home</p>
+                    <ArrowRight />
+                </Link>
             </main>
         </div>
 }

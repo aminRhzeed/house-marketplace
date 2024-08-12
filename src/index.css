@@ -419,6 +419,7 @@ input.passwordInput:-internal-autofill-selected {
 
 .categoryListings {
   padding: 0;
+  list-style: none;
 }
 
 .categoryListing {
@@ -436,7 +437,7 @@ input.passwordInput:-internal-autofill-selected {
 .categoryListingImg {
   width: 30%;
   height: 100px;
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
   object-fit: cover;
 }
 @media (min-width: 1024px) {
