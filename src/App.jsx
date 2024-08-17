@@ -11,6 +11,9 @@ import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Category from './pages/Category.jsx'
 import CreateListing from './pages/CreateListing.jsx'
+import Listing from './pages/Listing.jsx'
+import Contact from './pages/Contact.jsx'
+import EditListing from './pages/EditListing.jsx'
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
               <Route path='/sign-in' element={<SignIn />} />
               <Route path='/sign-up' element={<SignUp />} />
               <Route path='/create-listing' element={<CreateListing />} />
+              <Route path='/edit-listing/:listingId' element={<EditListing />} />
+              <Route path='/category/:categoryName/:listingId' element={<Listing />} />
+              <Route path='/contact/:landlordId' element={<Contact />}/>
           </Routes>
         <Navbar />
       </Router>

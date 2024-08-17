@@ -841,3 +841,7 @@ input.passwordInput:-internal-autofill-selected {
   font-size: 0.8rem;
   opacity: 0.75;
 }
+.leaflet-container .leaflet-control-attribution {
+  display: flex !important;
+  gap: 4px;
+}
